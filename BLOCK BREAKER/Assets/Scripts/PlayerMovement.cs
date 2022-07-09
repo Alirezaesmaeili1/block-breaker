@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {   
    // public Rigidbody Rb;
     public float PlayerSpeed = 20 ; 
+    public Rigidbody rb;
     void Start()
     {
         
@@ -14,11 +15,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Input.GetKey("a"))
         {
-            transform.Translate(new Vector3(-PlayerSpeed*Time.deltaTime,0,0));
+            rb.velocity=( new Vector3(-PlayerSpeed,0,0));
         }
         if(Input.GetKey("d"))
         {
-            transform.Translate(new Vector3(PlayerSpeed*Time.deltaTime,0,0));
+           rb.velocity=( new Vector3(PlayerSpeed,0,0));
         }
     }
 }
