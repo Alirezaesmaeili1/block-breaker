@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {   
     Rigidbody Rb;
+    
     public float BallSpeed = 5f;
     public float ChangeSpeed = 0.01f ;
     void Start() 
@@ -17,12 +18,15 @@ public class Bullet : MonoBehaviour
        Rb.velocity *=ChangeSpeed;
     }
     private void OnCollisionEnter(Collision other) {
+        Box box = other.gameObject.GetComponent<Box>();
         if(other.transform.tag=="Enemy"){
-            Destroy(other.gameObject);
-            //gameObject.SetActive(false);
-        }
-        if(other.transform.tag=="EnemyPlus"){
-            other.transform.tag="Enemy";
-        }
+            if(box.hits>1){
+                box.Brakbrick();
+                
+            }
+            else{
+                Destroy(other.gameObject);
+            }
     }
+}
 }
