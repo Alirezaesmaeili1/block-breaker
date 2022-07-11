@@ -21,5 +21,8 @@ public class Bullet : MonoBehaviour
             Destroy(other.gameObject);
             //gameObject.SetActive(false);
         }
+        if(other.transform.tag=="EnemyPlus"){
+            other.transform.tag="Enemy";
+        }
     }
 }
