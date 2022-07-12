@@ -27,6 +27,7 @@ public class Bullet : MonoBehaviour
             else{
                 Destroy(other.gameObject);
             }
+        }
         if(other.transform.tag=="ExteraBall"){
             if(box.hits>1){
                 box.Brakbrick();
@@ -42,4 +43,4 @@ public class Bullet : MonoBehaviour
 
     }
 }
-}
+
