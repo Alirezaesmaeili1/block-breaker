@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {   
     Rigidbody Rb;
-    
+    public GameObject exteraball;
     public float BallSpeed = 5f;
     public float ChangeSpeed = 0.01f ;
     void Start() 
@@ -27,6 +27,19 @@ public class Bullet : MonoBehaviour
             else{
                 Destroy(other.gameObject);
             }
+        if(other.transform.tag=="ExteraBall"){
+            if(box.hits>1){
+                box.Brakbrick();
+            }
+            else{
+                int numnewball = Random.Range(2,4);
+                  for(int i=0;i<numnewball;i++){
+                    GameObject newball = Instantiate(exteraball,transform.position,Quaternion.identity) as GameObject;
+                }
+                Destroy(other.gameObject);
+            }
+        }
+
     }
 }
 }

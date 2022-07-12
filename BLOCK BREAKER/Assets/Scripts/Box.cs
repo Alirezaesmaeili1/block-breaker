@@ -10,7 +10,6 @@ public class Box : MonoBehaviour
 
     public void Brakbrick(){
         hits--;
-        GetComponent<SpriteRenderer>().sprite = hitsprite ;
     }
 
 }

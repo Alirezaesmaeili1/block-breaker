@@ -4298,6 +4298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dee91cd0eaaae7742a4f43c1c61a73a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exteraball: {fileID: 499480859}
   BallSpeed: 500
   ChangeSpeed: 1.001
 --- !u!1001 &503055608
@@ -11923,7 +11924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 0
-  hits: 0
+  hits: 1
   hitsprite: {fileID: 0}
 --- !u!4 &1400335852 stripped
 Transform:
@@ -13963,7 +13964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1250922492522612, guid: 517a8607e4b54054b9216e69695d6e53, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: ExteraBall
       objectReference: {fileID: 0}
     - target: {fileID: 4398300625856066, guid: 517a8607e4b54054b9216e69695d6e53, type: 3}
       propertyPath: m_RootOrder
@@ -16396,7 +16397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1250922492522612, guid: 517a8607e4b54054b9216e69695d6e53, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: ExteraBall
       objectReference: {fileID: 0}
     - target: {fileID: 4398300625856066, guid: 517a8607e4b54054b9216e69695d6e53, type: 3}
       propertyPath: m_RootOrder
@@ -16539,7 +16540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 0
-  hits: 0
+  hits: 1
   hitsprite: {fileID: 0}
 --- !u!4 &1924788957 stripped
 Transform:
