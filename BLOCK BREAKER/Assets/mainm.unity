@@ -1339,11 +1339,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b97e712889582014c8dc1b56193a2314, type: 3}
+<<<<<<< HEAD
 --- !u!1 &178217252 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1250922492522612, guid: 517a8607e4b54054b9216e69695d6e53, type: 3}
   m_PrefabInstance: {fileID: 1608362353}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of 566677a (size)
 --- !u!4 &186146862 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4730184267674828, guid: aaa9fac6c56c64d4eaceb647b35c69ed, type: 3}
@@ -9996,6 +9999,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4443538666886656, guid: 9faf06d2bb3a717438a9adca8f2001cf, type: 3}
   m_PrefabInstance: {fileID: 1451084884}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!114 &1225064315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10011,6 +10015,8 @@ MonoBehaviour:
   points: 0
   hits: 0
   hitsprite: {fileID: 0}
+=======
+>>>>>>> parent of 566677a (size)
 --- !u!4 &1227838028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4730184267674828, guid: aaa9fac6c56c64d4eaceb647b35c69ed, type: 3}
@@ -10419,7 +10425,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1259995658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 1.14, y: 1, z: -21.11}
+=======
+  m_LocalPosition: {x: 1.93, y: 1, z: -21.11}
+>>>>>>> parent of 566677a (size)
   m_LocalScale: {x: 5, y: 1, z: 0.78}
   m_ConstrainProportionsScale: 0
   m_Children: []
