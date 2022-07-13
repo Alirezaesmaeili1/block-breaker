@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     public GameManager gm;
     public float BallSpeed = 5f;
     public float ChangeSpeed = 0.01f;
+    public UnityEvent oncollisionEvent;
     void Start() 
     {
         Rb=GetComponent<Rigidbody>(); 
@@ -20,6 +21,7 @@ public class Bullet : MonoBehaviour
        Rb.velocity *=ChangeSpeed;
     }
     private void OnCollisionEnter(Collision other) {
+        oncollisionEvent?.Invoke();
         Box box = other.gameObject.GetComponent<Box>();
         if(other.transform.tag=="Enemy"){
             if(box.hits>1){
