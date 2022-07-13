@@ -6,10 +6,11 @@ using UnityEngine.Events;
 public class Bullet : MonoBehaviour
 {   
     Rigidbody Rb;
-    public UnityEvent oncollisionEvent;
     public GameObject exteraball;
+    public GameManager gm;
+    public ChangeMateral cm;
     public float BallSpeed = 5f;
-    public float ChangeSpeed = 0.01f ;
+    public float ChangeSpeed = 0.01f;
     void Start() 
     {
         Rb=GetComponent<Rigidbody>(); 
@@ -20,14 +21,24 @@ public class Bullet : MonoBehaviour
        Rb.velocity *=ChangeSpeed;
     }
     private void OnCollisionEnter(Collision other) {
-        oncollisionEvent?.Invoke();
         Box box = other.gameObject.GetComponent<Box>();
         if(other.transform.tag=="Enemy"){
             if(box.hits>1){
                 box.Brakbrick();
+            }
+            else{
+                gm.ChangeScore(box.points);
+                Destroy(other.gameObject);
+            }
+        }
+        if(other.transform.tag=="ExteraLife"){
+             if(box.hits>1){
+                box.Brakbrick();
                 
             }
             else{
+                gm.ChangeScore(box.points);
+                gm.ChangeLives(1);
                 Destroy(other.gameObject);
             }
         }
@@ -42,6 +53,9 @@ public class Bullet : MonoBehaviour
                 }
                 Destroy(other.gameObject);
             }
+        }
+        if(other.transform.tag=="LoseFance"){
+            gm.ChangeLives(-1);
         }
 
     }
