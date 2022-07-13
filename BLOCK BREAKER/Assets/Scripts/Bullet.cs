@@ -22,6 +22,16 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other) {
         Box box = other.gameObject.GetComponent<Box>();
+         if(other.transform.tag=="ChangeMate"){
+             if(box.hits>1){
+                box.Brakbrick();
+                cm.changemat();
+            }
+            else{
+                gm.ChangeScore(box.points);
+                Destroy(other.gameObject);
+            }
+        }
         if(other.transform.tag=="Enemy"){
             if(box.hits>1){
                 box.Brakbrick();
@@ -56,16 +66,6 @@ public class Bullet : MonoBehaviour
         }
         if(other.transform.tag=="LoseFance"){
             gm.ChangeLives(-1);
-        }
-        if(other.transform.tag=="ChangeMate"){
-             if(box.hits>1){
-                box.Brakbrick();
-                cm.changemat();
-            }
-            else{
-                gm.ChangeScore(box.points);
-                Destroy(other.gameObject);
-            }
         }
 
     }
