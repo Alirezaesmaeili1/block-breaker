@@ -57,6 +57,16 @@ public class Bullet : MonoBehaviour
         if(other.transform.tag=="LoseFance"){
             gm.ChangeLives(-1);
         }
+        if(other.transform.tag=="ChangeMate"){
+             if(box.hits>1){
+                box.Brakbrick();
+                cm.changemat();
+            }
+            else{
+                gm.ChangeScore(box.points);
+                Destroy(other.gameObject);
+            }
+        }
 
     }
 }
