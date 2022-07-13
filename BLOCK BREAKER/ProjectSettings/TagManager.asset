@@ -8,6 +8,8 @@ TagManager:
   - EnemyPlus
   - Ball
   - ExteraBall
+  - LoseFance
+  - ExteraLife
   layers:
   - Default
   - TransparentFX

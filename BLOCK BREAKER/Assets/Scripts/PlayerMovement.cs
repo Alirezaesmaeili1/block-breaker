@@ -21,5 +21,11 @@ public class PlayerMovement : MonoBehaviour
         {
            transform.Translate(new Vector3(PlayerSpeed*Time.deltaTime,0,0));
         }
+        if(Input.GetKey("w")){
+          transform.Translate(new Vector3(0,0,PlayerSpeed*Time.deltaTime));
+        }
+         if(Input.GetKey("s")){
+          transform.Translate(new Vector3(0,0,-PlayerSpeed*Time.deltaTime));
+        }
     }
 }
