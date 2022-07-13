@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Bullet : MonoBehaviour
 {   
     Rigidbody Rb;
+    public UnityEvent oncollisionEvent;
     public GameObject exteraball;
     public float BallSpeed = 5f;
     public float ChangeSpeed = 0.01f ;
@@ -18,6 +20,7 @@ public class Bullet : MonoBehaviour
        Rb.velocity *=ChangeSpeed;
     }
     private void OnCollisionEnter(Collision other) {
+        oncollisionEvent?.Invoke();
         Box box = other.gameObject.GetComponent<Box>();
         if(other.transform.tag=="Enemy"){
             if(box.hits>1){
