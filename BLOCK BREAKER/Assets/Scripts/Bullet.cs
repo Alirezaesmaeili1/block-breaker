@@ -8,7 +8,6 @@ public class Bullet : MonoBehaviour
     Rigidbody Rb;
     public GameObject exteraball;
     public GameManager gm;
-    public ChangeMateral cm;
     public float BallSpeed = 5f;
     public float ChangeSpeed = 0.01f;
     void Start() 
@@ -22,16 +21,6 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other) {
         Box box = other.gameObject.GetComponent<Box>();
-         if(other.transform.tag=="ChangeMate"){
-             if(box.hits>1){
-                box.Brakbrick();
-                cm.changemat();
-            }
-            else{
-                gm.ChangeScore(box.points);
-                Destroy(other.gameObject);
-            }
-        }
         if(other.transform.tag=="Enemy"){
             if(box.hits>1){
                 box.Brakbrick();
@@ -64,7 +53,7 @@ public class Bullet : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
-        if(other.transform.tag=="LoseFance"){
+        if(other.transform.tag=="LoseFance"&&gm.Lives!=0){
             gm.ChangeLives(-1);
         }
 
